@@ -1,6 +1,6 @@
 CREATE table staff (
     id serial primary key, -- this is a primary key 
-    name varchar (255) --a string 
+    name varchar (255) -- a string 
 ); 
 CREATE table building (
     id serial primary key, 
@@ -9,7 +9,7 @@ CREATE table building (
 CREATE table parkinglot (
     id serial primary key, 
     name varchar (255),
-    capacity int, --this is a int(number)
+    capacity int, -- this is a int(number)
     utilization int
 ); 
 CREATE table buildingmaintenance (
@@ -18,3 +18,43 @@ CREATE table buildingmaintenance (
     building int references building(id), -- foreign key reference 
     staff int references staff(id)
 ); 
+CREATE table admission (
+    id serial primary key, -- this is a primary key 
+    amount int -- this is a int(number) 
+); 
+CREATE table ride (
+    id serial primary key, 
+    name varchar (255),
+    staff int references staff(id)
+); 
+CREATE table ridemaintenance (
+    id serial primary key, 
+    ride int references ride(id),
+    staff int references staff(id),
+    message varchar (255)
+); 
+CREATE table ticket (
+    id serial primary key,
+    admission int references admission(id),
+    ride int references ride(id)
+);
+CREATE table fooditem (
+    id serial primary key,
+    name varchar (255),
+    amount int
+);
+CREATE table foodsale (
+    id serial primary key,
+    item int references fooditem(id),
+    quantity int
+);
+CREATE table merchitem (
+    id serial primary key,
+    name varchar (255),
+    amount int
+);
+CREATE table merchsale (
+    id serial primary key,
+    item int references merchitem(id),
+    quantity int
+);
