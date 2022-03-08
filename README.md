@@ -14,7 +14,7 @@ cat schema.sql | psql -U postgres
 ## docker commands
 This command starts postgres 
 ```ps1
- docker run -it -e POSTGRES_PASSWORD=password -v C:\Users\jonth\OneDrive\Documents\Themepark:/app postgres
+ docker run -it -e POSTGRES_PASSWORD=password -v ${PWD}:/app postgres
  ```
 This command lists out our container
 ```

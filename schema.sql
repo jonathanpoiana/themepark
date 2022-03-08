@@ -1,14 +1,14 @@
 CREATE table staff (
     id serial primary key, -- this is a primary key 
-    name varchar (255) -- a string 
+    name varchar (255) UNIQUE -- a string 
 ); 
 CREATE table building (
     id serial primary key, 
-    name varchar (255)
+    name varchar (255) UNIQUE
 ); 
 CREATE table parkinglot (
     id serial primary key, 
-    name varchar (255),
+    name varchar (255) UNIQUE,
     capacity int, -- this is a int(number)
     utilization int
 ); 
@@ -24,7 +24,7 @@ CREATE table admission (
 ); 
 CREATE table ride (
     id serial primary key, 
-    name varchar (255),
+    name varchar (255) UNIQUE,
     staff int references staff(id)
 ); 
 CREATE table ridemaintenance (
@@ -40,7 +40,7 @@ CREATE table ticket (
 );
 CREATE table fooditem (
     id serial primary key,
-    name varchar (255),
+    name varchar (255) UNIQUE,
     amount int
 );
 CREATE table foodsale (
@@ -50,7 +50,7 @@ CREATE table foodsale (
 );
 CREATE table merchitem (
     id serial primary key,
-    name varchar (255),
+    name varchar (255) UNIQUE,
     amount int
 );
 CREATE table merchsale (
