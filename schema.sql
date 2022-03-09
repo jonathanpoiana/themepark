@@ -1,6 +1,13 @@
 CREATE table staff (
     id serial primary key, -- this is a primary key 
-    name varchar (255) UNIQUE -- a string 
+    first_name varchar (255), --a string 255 long
+    last_name varchar (255),
+    age int,
+    phone varchar (255),
+    email varchar (255) UNIQUE,
+    department varchar (255),
+    rolename varchar (255),
+    pay int
 ); 
 CREATE table building (
     id serial primary key, 

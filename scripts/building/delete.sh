@@ -1,7 +1,7 @@
-echo -n Enter Staff email:
+echo -n Enter building Name:
 
 # Store The Input From The User in the variable NAME
-read EMAIL
+read NAME 
 
 # SQL Template. $NAME Replaces the variable with the stored name. String is converted to Uppercase to prevent duplicates
-echo "SELECT * FROM staff WHERE email = UPPER('$EMAIL')" | psql -U postgres
+echo "DELETE FROM building WHERE name = UPPER('$NAME')" | psql -U postgres
