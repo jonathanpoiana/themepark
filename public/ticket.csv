@@ -1,0 +1,8 @@
+Type,Admission Days/times, Price ,
+Regular-Day (Full),Open - Close, $120.00 ,
+Night (Half),Evening - Close, $60.00 ,
+Weekend,2 Days, $200.00 ,
+Seasonal,Valid Until End of Calendar Year, $800.00 ,
+Event,Valid Until End of Event, Varies ,
+Holiday/Special,Varies Depedinging on Holiday, Varies ,
+Fast Pass,Open - Close, $20.00 ,
