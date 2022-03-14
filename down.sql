@@ -10,3 +10,4 @@ drop table if exists foodsale;
 drop table if exists fooditem;
 drop table if exists merchsale;
 drop table if exists merchitem;
+drop table if exists customers;

@@ -4,21 +4,20 @@
 print("DELETE FROM staff;")
 
 rows = []
-with open("public/staff.csv") as f:
+with open("public/employee.csv") as f:
     for line in f:
         row = line.split(",")
-        id, first_name, last_name, age, phone, email, department, rolename, pay = row[0:9]
+        id, first_name, last_name, age, phone, email, department, rolename = row[0:8]
 
         rows.append(str((
             first_name, 
             last_name, 
             int(age), 
             phone, 
-            email, 
+            email.upper(),
             department, 
-            rolename, 
-            0 if pay == "" else int(int(pay) * 100)
+            rolename
             )))
-print("INSERT INTO staff(first_name, last_name, age, phone, email, department, rolename, pay) VALUES ")
+print("INSERT INTO staff(first_name, last_name, age, phone, email, department, rolename) VALUES ")
 print(",\n\t".join(rows))
 print(";")

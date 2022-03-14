@@ -48,6 +48,7 @@ CREATE table ticket (
 CREATE table fooditem (
     id serial primary key,
     name varchar (255) UNIQUE,
+    location varchar(255),
     amount int
 );
 CREATE table foodsale (
@@ -64,4 +65,13 @@ CREATE table merchsale (
     id serial primary key,
     item int references merchitem(id),
     quantity int
+);
+CREATE table customers (
+    id serial primary key, -- this is a primary key 
+    first_name varchar (255), --a string 255 long
+    last_name varchar (255),
+    age int,
+    phone varchar (255),
+    email varchar (255) UNIQUE
+    
 );
