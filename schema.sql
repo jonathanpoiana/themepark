@@ -75,3 +75,14 @@ CREATE table customers (
     email varchar (255) UNIQUE
     
 );
+
+create TABLE events (
+    id serial primary key,
+    event varchar(255),
+    date varchar(255),
+    time varchar(255),
+    performers varchar(255),
+    location varchar(255),
+    price int,
+    seating int
+)

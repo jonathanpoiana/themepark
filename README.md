@@ -27,4 +27,14 @@ CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS      
 This command executes a shell inside our container 
 ```
 docker exec -it 557e5f90fa82 bash
+
+cd /app # change into the project directory
+apt-get update && apt-get install python -y # Install python
+```
+
+
+## Run the Migrations
+```sh
+scripts/migrate/up.sh
+scripts/migrate/batch.sh
 ```

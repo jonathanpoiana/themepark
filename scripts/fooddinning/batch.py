@@ -1,21 +1,23 @@
 
 
 
-print("DELETE FROM customers;")
+print("DELETE FROM fooditem;")
 
 rows = []
-with open("public/customers.csv") as f:
+with open("public/fooddinning.csv") as f:
+    skipedHeader = False
     for line in f:
+        if not skipedHeader:
+            skipedHeader = True
+            continue
         row = line.split(",")
-        id, first_name, last_name, age, phone, email = row[0:9]
+        location, name, price = row[0:3]
 
         rows.append(str((
-            first_name, 
-            last_name, 
-            int(age), 
-            phone, 
-            email.replace("\n", "").replace("\r","").upper()
+            location, 
+            name, 
+            int(float(price.replace("\n","").replace("\r", "")) * 100)
             )))
-print("INSERT INTO customers(first_name, last_name, age, phone, email) VALUES ")
+print("INSERT INTO fooditem(name, location, amount) VALUES ")
 print(",\n\t".join(rows))
 print(";")

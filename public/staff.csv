@@ -1,3 +1,4 @@
+id, first_name, last_name, age, phone, email, department, rolename
 442106,Jonathan,Poiana,56,(372) 669-6096,JPoiana281@cityinthesky.com,=RANDARRAY,,,,Dining
 869982,Rebecca,Villareal,58,(355) 500-9320,RVillareal186@cityinthesky.com,Attractions,,,,Merchandise
 618018,Yohaness,Cunningham,59,(889) 630-4059,YCunningham576@cityinthesky.com,Attractions,,,,Attractions

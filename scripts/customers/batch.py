@@ -5,7 +5,11 @@ print("DELETE FROM customers;")
 
 rows = []
 with open("public/customers.csv") as f:
+    skipedHeader = False
     for line in f:
+        if not skipedHeader:
+            skipedHeader = True
+            continue
         row = line.split(",")
         id, first_name, last_name, age, phone, email = row[0:9]
 
